@@ -5,7 +5,7 @@
 CM.Cache.AddQueue = function() {
 	CM.Cache.Queue = document.createElement('script');
 	CM.Cache.Queue.type = 'text/javascript';
-	CM.Cache.Queue.setAttribute('src', 'http://aktanusa.github.io/CookieMonster/queue/queue.js');
+	CM.Cache.Queue.setAttribute('src', 'http://nabella69.github.io/CookieMonster/queue/queue.js');
 	document.head.appendChild(CM.Cache.Queue);
 }
 
