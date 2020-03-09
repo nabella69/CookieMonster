@@ -54,7 +54,7 @@ Copy this code and save it as a bookmark. Paste it in the URL section. To activa
 
 ```javascript
 javascript: (function () {
-	Game.LoadMod('https://aktanusa.github.io/CookieMonster/CookieMonster.js');
+	Game.LoadMod('http://aktanusa.github.io/CookieMonster/CookieMonster.js');
 }());
 ```
 
@@ -64,7 +64,7 @@ For beta, use the following instead:
 
 ```javascript
 javascript: (function () {
-	Game.LoadMod('https://aktanusa.github.io/CookieMonster/CookieMonsterBeta.js');
+	Game.LoadMod('http://aktanusa.github.io/CookieMonster/CookieMonsterBeta.js');
 }());
 ```
 
@@ -77,21 +77,18 @@ If you'd rather use the addon as a script via per example *Greasemonkey* or *Tam
 // @name Cookie Monster
 // @namespace Cookie
 // @include http://orteil.dashnet.org/cookieclicker/
-// @include https://orteil.dashnet.org/cookieclicker/
 // @version 1
 // @grant none
 // ==/UserScript==
 
-var code = "(" + (function() {
+(function() {
     var checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://aktanusa.github.io/CookieMonster/CookieMonster.js');
+            Game.LoadMod('http://aktanusa.github.io/CookieMonster/CookieMonster.js');
             clearInterval(checkReady);
         }
     }, 1000);
-}).toString() + ")()";
-
-window.eval(code);
+})();
 ```
 If you are using the beta, use this instead:
 
@@ -100,21 +97,18 @@ If you are using the beta, use this instead:
 // @name Cookie Monster Beta
 // @namespace Cookie
 // @include http://orteil.dashnet.org/cookieclicker/beta/
-// @include https://orteil.dashnet.org/cookieclicker/beta/
 // @version 1
 // @grant none
 // ==/UserScript==
 
-var code = "(" + (function() {
+(function() {
     var checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://aktanusa.github.io/CookieMonster/CookieMonsterBeta.js');
+            Game.LoadMod('http://aktanusa.github.io/CookieMonster/CookieMonsterBeta.js');
             clearInterval(checkReady);
         }
     }, 1000);
-}).toString() + ")()";
-
-window.eval(code);
+})();
 ```
 
 # Bugs and suggestions
@@ -135,7 +129,7 @@ All suggestions are welcome, even the smallest ones.
 
 # Contributors
 
-* **[Raving_Kumquat](https://cookieclicker.wikia.com/wiki/User:Raving_Kumquat)**: Original author
+* **[Raving_Kumquat](http://cookieclicker.wikia.com/wiki/User:Raving_Kumquat)**: Original author
 * **[Maxime Fabre](https://github.com/Anahkiasen)**: Previous maintainer
 * **[Alderi Tokori](http://forum.dashnet.org/profile/Alderi)**: ROI calculations (unused now)
 * **[Alhifar](https://github.com/Alhifar)**: Missed Golden Cookie Stat
